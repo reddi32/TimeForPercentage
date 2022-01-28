@@ -1,275 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="0dp"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp">
 
+    <EditText
+        android:id="@+id/cost_of_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="@string/costo_del_prodotto"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
 
-        <EditText
-            android:id="@+id/cost_of_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="@string/costo_del_prodotto"
-            android:importantForAutofill="no"
-            android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/calcola"
+        android:textColorHighlight="#9C27B0"
+        android:textColorLink="#9C27B0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentuale" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="@+id/cost_of_service"
-            app:layout_constraintEnd_toStartOf="@+id/cost_of_service"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cost_of_service"
-            app:srcCompat="@drawable/ic_store" />
+    <TextView
+        android:id="@+id/tip_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_button"
+        tools:text="Stai risparmiando: $10" />
 
-        <TextView
-            android:id="@+id/service_question"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/che_sconto_va_applicato"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toBottomOf="@+id/cost_of_service" />
+    <TextView
+        android:id="@+id/tip_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip_result"
+        tools:text="Il prezzo finale è: $10" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="@+id/service_question"
-            app:layout_constraintEnd_toStartOf="@+id/service_question"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/service_question"
-            app:srcCompat="@drawable/ic_service" />
+    <EditText
+        android:id="@+id/percentuale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/percentuale_di_sconto"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cost_of_service"
+        tools:ignore="TextContrastCheck" />
 
-        <Button
-            android:id="@+id/calculate_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/calcola"
-            android:textColorHighlight="#9C27B0"
-            android:textColorLink="#9C27B0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/round_up_switch" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/cost_of_service"
+        app:layout_constraintEnd_toStartOf="@+id/cost_of_service"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cost_of_service"
+        app:layout_constraintVertical_bias="0.625"
+        app:srcCompat="@drawable/ic_store"
+        tools:ignore="ImageContrastCheck" />
 
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/round_up_switch"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/service_question">
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="@+id/percentuale"
+        app:layout_constraintEnd_toStartOf="@+id/percentuale"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/percentuale"
+        app:srcCompat="@drawable/ic_baseline_euro_24"
+        tools:ignore="ImageContrastCheck" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/scopri_quanto_pagherai"
+        android:textColor="#9C27B0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioGroup
-                android:id="@+id/tip_options"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <RadioButton
-                    android:id="@+id/option_novantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_95"
-                    android:textColorHighlight="#9C27B0"
-                    android:textColorLink="#FF6200EE" />
-
-                <RadioButton
-                    android:id="@+id/option_novanta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_90"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_ottantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_85"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_ottanta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_80"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_settantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_75"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_settanta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_70"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_sessantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_65"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_sessanta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="48dp"
-                    android:text="@string/sconto_del_60"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_cinquantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_55"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_cinquanta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_50"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_quarantacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_45"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_quaranta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_40"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_trentacinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_35"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_trenta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_30"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_venticinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_25"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_venti"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_20"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_quindici"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_15"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_dieci"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_10"
-                    android:textColorHighlight="#9C27B0" />
-
-                <RadioButton
-                    android:id="@+id/option_cinque"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sconto_del_5"
-                    android:textColorHighlight="#9C27B0" />
-            </RadioGroup>
-        </ScrollView>
-
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/round_up_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:minHeight="48dp"
-            android:text="@string/sconto_preciso_o_arrotondato"
-            android:textColorHighlight="#9C27B0"
-            android:textColorLink="#FF6200EE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
-
-        <TextView
-            android:id="@+id/tip_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/calculate_button"
-            tools:text="Lo sconto applicato è: $10" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/todo"
-            app:layout_constraintBottom_toBottomOf="@+id/round_up_switch"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/round_up_switch"
-            app:srcCompat="@drawable/ic_round_up" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

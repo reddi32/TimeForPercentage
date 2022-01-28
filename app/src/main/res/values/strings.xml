@@ -1,29 +1,12 @@
 <resources>
     <string name="app_name">TimeForPercentage</string>
     <string name="costo_del_prodotto">Costo del prodotto</string>
-    <string name="quanto_costa_il_prodotto">Quanto costa il prodotto?</string>
-    <string name="sconto_del_5">Sconto del 5%</string>
-    <string name="sconto_del_10">Sconto del 10%</string>
-    <string name="sconto_del_70">Sconto del 70%</string>
-    <string name="sconto_del_75">Sconto del 75%</string>
-    <string name="sconto_del_15">Sconto del 15%</string>
+
     <string name="calcola">Calcola</string>
-    <string name="sconto_preciso_o_arrotondato">Sconto preciso o arrotondato?</string>
-    <string name="sconto_del_20">Sconto del 20%</string>
-    <string name="sconto_del_25">Sconto del 25%</string>
-    <string name="sconto_del_30">Sconto del 30%</string>
-    <string name="sconto_del_35">Sconto del 35%</string>
-    <string name="sconto_del_40">Sconto del 40%</string>
-    <string name="sconto_del_45">Sconto del 45%</string>
-    <string name="sconto_del_50">Sconto del 50%</string>
-    <string name="sconto_del_55">Sconto del 55%</string>
-    <string name="sconto_del_60">Sconto del 60%</string>
-    <string name="sconto_del_65">Sconto del 65%</string>
-    <string name="sconto_del_80">Sconto del 80%</string>
-    <string name="sconto_del_85">Sconto del 85%</string>
-    <string name="sconto_del_90">Sconto del 90%</string>
-    <string name="sconto_del_95">Sconto del 95%</string>
-    <string name="che_sconto_va_applicato">Che sconto va applicato?</string>
+    <string name="tip_amount"> Stai risparmiando: %s</string>
+    <string name="tip_final"> Il prezzo finale è: %s</string>
+    <string name="percentuale_di_sconto">Percentuale di sconto</string>
     <string name="todo">TODO</string>
-    <string name="tip_amount"> Lo sconto apllicato è: %s</string>
+    <string name="scopri_quanto_pagherai">Scopri quanto pagherai</string>
+
 </resources>
