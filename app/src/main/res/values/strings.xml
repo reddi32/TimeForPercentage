@@ -1,12 +1,12 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">TimeForPercentage</string>
-    <string name="costo_del_prodotto">Costo del prodotto</string>
+    <string name="costo_del_prodotto" tools:keep="@string/costo_del_prodotto">Costo del prodotto</string>
 
-    <string name="calcola">Calcola</string>
+    <string name="calcola" tools:keep="@string/calcola">Calcola</string>
     <string name="tip_amount"> Stai risparmiando: %s</string>
     <string name="tip_final"> Il prezzo finale è: %s</string>
-    <string name="percentuale_di_sconto">Percentuale di sconto</string>
-    <string name="todo">TODO</string>
-    <string name="scopri_quanto_pagherai">Scopri quanto pagherai</string>
+    <string name="percentuale_di_sconto" tools:keep="@string/percentuale_di_sconto">Percentuale di sconto</string>
+    <string name="todo" tools:keep="@string/todo">TODO</string>
+    <string name="scopri_quanto_pagherai" tools:keep="@string/scopri_quanto_pagherai">Scopri quanto pagherai</string>
 
 </resources>

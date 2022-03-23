@@ -30,17 +30,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:marqueeRepeatLimit="marquee_forever"
         android:text="@string/calcola"
         android:textColorHighlight="#9C27B0"
         android:textColorLink="#9C27B0"
-        app:cornerRadius="15dp"
+        app:cornerRadius="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/percentuale"
-        tools:targetApi="s" />
+        app:layout_constraintTop_toBottomOf="@+id/percentuale" />
 
     <TextView
         android:id="@+id/tip_result"
