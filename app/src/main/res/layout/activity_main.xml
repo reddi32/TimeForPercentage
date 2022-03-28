@@ -83,33 +83,6 @@
         app:layout_constraintTop_toBottomOf="@+id/cost_of_service"
         tools:ignore="TextContrastCheck" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/cost_of_service"
-        app:layout_constraintEnd_toStartOf="@+id/cost_of_service"
-        app:layout_constraintHorizontal_bias="0.885"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cost_of_service"
-        app:layout_constraintVertical_bias="0.625"
-        app:srcCompat="@drawable/ic_store"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/percentuale"
-        app:layout_constraintEnd_toStartOf="@+id/percentuale"
-        app:layout_constraintHorizontal_bias="0.87"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/percentuale"
-        app:srcCompat="@drawable/ic_baseline_euro_24"
-        tools:ignore="ImageContrastCheck" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -122,5 +95,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cost_of_service"
+        app:layout_constraintEnd_toStartOf="@+id/cost_of_service"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cost_of_service"
+        app:srcCompat="@drawable/ic_shopping_cart_svgrepo_com"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/percentuale"
+        app:layout_constraintTop_toTopOf="@+id/percentuale"
+        app:srcCompat="@drawable/outline_percent_24"
+        tools:layout_editor_absoluteX="54dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
