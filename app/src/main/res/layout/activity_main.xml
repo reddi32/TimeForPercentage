@@ -117,6 +117,7 @@
         app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cost_of_service"
-        app:srcCompat="@drawable/ic_store" />
+        app:srcCompat="@drawable/ic_store"
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

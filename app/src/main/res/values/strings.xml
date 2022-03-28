@@ -8,6 +8,4 @@
     <string name="percentuale_di_sconto" tools:keep="@string/percentuale_di_sconto">Percentuale di sconto</string>
     <string name="todo" tools:keep="@string/todo">TODO</string>
     <string name="scopri_quanto_pagherai" tools:keep="@string/scopri_quanto_pagherai">Scopri quanto pagherai</string>
-    <string name="todo">TODO</string>
-
 </resources>
